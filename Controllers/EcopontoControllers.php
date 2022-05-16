@@ -1,19 +1,21 @@
 <?php
-class EbookController{
+class EcopontoControllers{
     
     function create(){
         $response = new Output();
         $response->allowedMethod('POST');
         $name = $_POST['name'];
-        $author = $_POST['author'];
+        $number = $_POST['number'];
+        $adress = $_POST['adress'];
 
-        $user = new Ebook(null, $name,$author);
+        $user = new Ecoponto(null, $name,$number,$adress);
         $id = $user->create();
 
         $result['message'] = "Criado com sucesso";
         $result['user']['id'] = $id;
         $result['user']['name'] = $name;
-        $result['user']['author'] = $author;
+        $result['user']['number'] = $number;
+        $result['user']['adress'] = $adress;
         $response->out($result);
 
     }
@@ -23,7 +25,7 @@ class EbookController{
         $response->allowedMethod('POST');
         $id = $_POST['id'];
 
-        $user = new Ebook($id, null,null,null);
+        $user = new Ecoponto($id, null,null,null);
         $user->delete();
 
         $result['message'] = "Deletado com sucesso";
@@ -36,22 +38,24 @@ class EbookController{
         $response->allowedMethod('POST');
         $id = $_POST['id'];
         $name = $_POST['name'];
-        $author = $_POST['author'];
+        $number = $_POST['number'];
+        $adress = $_POST['adress'];
 
-        $user = new Ebook($id,$name,$author);
+        $user = new Ecoponto($id,$name,$number,$adress);
         $user->update();
 
         $result['message'] = "Atualizado com sucesso";
         $result['user']['id'] = $id;
         $result['user']['name'] = $name;
-        $result['user']['author'] = $author;
+        $result['user']['number'] = $number;
+        $result['user']['adress'] = $adress;
         $response->out($result);
     }
     
     function selectAll(){
         $response = new Output();
         $response->allowedMethod('GET');
-        $user = new Ebook(null,null,null,null);
+        $user = new Ecoponto(null,null,null,null);
         $result = $user->selectAll();
         $response->out($result);
     }
@@ -60,7 +64,7 @@ class EbookController{
         $response = new Output();
         $response->allowedMethod('GET');
         $id = $_GET['id'];
-        $user = new Ebook($id,null,null,null);
+        $user = new Ecoponto($id,null,null,null);
         $result = $user->selectByid();
         $response->out($result);
     }

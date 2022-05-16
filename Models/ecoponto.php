@@ -28,7 +28,7 @@ class Ecoponto{
         catch(PDOException $e){
             $result['message'] = "Error Select All Ecopoint: " . $e->getMessage();
             $response = new Output();
-            $response->out($result);
+            $response->out($result,500);
         }
     }
     function delete(){

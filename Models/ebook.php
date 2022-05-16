@@ -1,5 +1,4 @@
 <?php 
-
 class Ebook{
     public $id;
     public $name;
@@ -14,7 +13,7 @@ class Ebook{
         $db = new Database();
         try{
             $stmt = $db->conn->prepare("INSERT INTO ebook (name, author)
-            VALUES (:name, :author;");
+            VALUES (:name, :author);");
             $stmt->bindParam(':name' , $this->name);
             $stmt->bindParam(':author' , $this->author);
             $stmt->execute();
@@ -23,9 +22,9 @@ class Ebook{
             return $id;
         }
         catch(PDOException $e){
-            $result['message'] = "Error Select All Ebook: " . $e->getMessage();
+            $result['message'] = "Error Create Ebook: " . $e->getMessage();
             $response = new Output();
-            $response->out($result);
+            $response->out($result,500);
         }
     }
     function delete(){
@@ -37,22 +36,23 @@ class Ebook{
                 return true;
             }
             catch(PDOException $e){
-            $result['message'] = "Error Select All Ebook: " . $e->getMessage();
+            $result['message'] = "Error Delete Ebook: " . $e->getMessage();
             $response = new Output();
-            $response->out($result);
+            $response->out($result,500);
             }
     }
     function update(){
         $db = new Database(); 
         try{
-            $stmt = $db->conn->prepare("UPDATE ebook SET  name = :name, author = :author,  = : WHERE id = :id;");
+            $stmt = $db->conn->prepare("UPDATE ebook SET  name = :name, author = :author WHERE id = :id;");
+            $stmt->bindParam(':id', $this->id);
             $stmt->bindParam(':name', $this->name);
             $stmt->bindParam(':author', $this->author);
             $stmt->execute();
             return true;
         }
         catch(PDOException $e){
-            $result['message'] = "Error Select All Ebook: " . $e->getMessage();
+            $result['message'] = "Error Update Ebook: " . $e->getMessage();
             $response = new Output();
             $response->out($result, 500);
         } 
@@ -81,7 +81,7 @@ class Ebook{
             return $result;
         }
         catch(PDOException $e){
-            $result['message'] = "Error Select All Ebook: " . $e->getMessage();
+            $result['message'] = "Error Select By Id Ebook: " . $e->getMessage();
             $response = new Output();
             $response->out($result, 500);
         }   
