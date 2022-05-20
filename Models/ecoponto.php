@@ -6,7 +6,7 @@ class Ecoponto{
     public $number;
     public $adress;
 
-    function __construct($id, $name, $author, $adress) {
+    function __construct($id, $name, $number, $adress) {
         $this->id = $id;
         $this->name = $name;
         $this->number = $number;
