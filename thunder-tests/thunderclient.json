@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "bc5d48c5-3612-4d74-93db-11e53c4d9fc1",
+    "colId": "1c56fb4e-f59e-44e8-9de1-c3c31c2ad109",
+    "containerId": "",
+    "name": "/ebook/select-all",
+    "url": "http://localhost/reverse--api/api/ebook/select-all",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-05-23T17:48:41.931Z",
+    "modified": "2022-05-23T17:48:41.931Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

@@ -1,4 +1,11 @@
 <?php
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Methods: GET, POST, OPTIONS, DELETE, PUT");
+    header("Access-Control-Allow-Headers: Access-Token");
+    die;
+}
+
 require('config.php'); 
 // cria a constante caminho padrão
 $url = $_SERVER['REQUEST_URI']; // pega o que está na url
