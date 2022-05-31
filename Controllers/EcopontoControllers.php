@@ -7,15 +7,18 @@ class EcopontoControllers{
         $name = $_POST['name'];
         $number = $_POST['number'];
         $adress = $_POST['adress'];
+        $photo = $_POST['photo'];
 
-        $user = new Ecoponto(null, $name,$number,$adress);
-        $id = $user->create();
+        $eco = new Ecoponto(null, $name,$number,$adress,$photo);
+        $id = $eco->create();
 
         $result['message'] = "Criado com sucesso";
-        $result['user']['id'] = $id;
-        $result['user']['name'] = $name;
-        $result['user']['number'] = $number;
-        $result['user']['adress'] = $adress;
+        $result['ecoponto']['id'] = $id;
+        $result['ecoponto']['name'] = $name;
+        $result['ecoponto']['number'] = $number;
+        $result['ecoponto']['adress'] = $adress;
+        $result['ecoponto']['photo'] = $photo;
+
         $response->out($result);
 
     }
@@ -25,11 +28,11 @@ class EcopontoControllers{
         $response->allowedMethod('POST');
         $id = $_POST['id'];
 
-        $user = new Ecoponto($id, null,null,null);
-        $user->delete();
+        $eco = new Ecoponto($id, null,null,null,null);
+        $eco->delete();
 
         $result['message'] = "Deletado com sucesso";
-        $result['user']['id'] = $id;
+        $result['ecoponto']['id'] = $id;
         $response->out($result);
     }
 
@@ -40,23 +43,25 @@ class EcopontoControllers{
         $name = $_POST['name'];
         $number = $_POST['number'];
         $adress = $_POST['adress'];
+        $photo = $_POST['photo'];
 
-        $user = new Ecoponto($id,$name,$number,$adress);
-        $user->update();
+        $eco = new Ecoponto($id,$name,$number,$adress,$photo);
+        $eco->update();
 
         $result['message'] = "Atualizado com sucesso";
-        $result['user']['id'] = $id;
-        $result['user']['name'] = $name;
-        $result['user']['number'] = $number;
-        $result['user']['adress'] = $adress;
+        $result['ecoponto']['id'] = $id;
+        $result['ecoponto']['name'] = $name;
+        $result['ecoponto']['number'] = $number;
+        $result['ecoponto']['adress'] = $adress;
+        $result['ecoponto']['photo'] = $photo;
         $response->out($result);
     }
     
     function selectAll(){
         $response = new Output();
         $response->allowedMethod('GET');
-        $user = new Ecoponto(null,null,null,null);
-        $result = $user->selectAll();
+        $eco = new Ecoponto(null,null,null,null);
+        $result = $eco->selectAll();
         $response->out($result);
     }
 
@@ -64,8 +69,8 @@ class EcopontoControllers{
         $response = new Output();
         $response->allowedMethod('GET');
         $id = $_GET['id'];
-        $user = new Ecoponto($id,null,null,null);
-        $result = $user->selectByid();
+        $eco = new Ecoponto($id,null,null,null);
+        $result = $eco->selectByid();
         $response->out($result);
     }
 }
