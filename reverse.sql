@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 02-Jun-2022 às 17:06
+-- Tempo de geração: 02-Jun-2022 às 18:43
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 7.4.29
 
@@ -20,8 +20,20 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `reverse`
 --
-CREATE DATABASE IF NOT EXISTS `reverse` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `reverse`;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `administrador`
+--
+
+CREATE TABLE `administrador` (
+  `id` int(20) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `pass` varchar(100) NOT NULL,
+  `roles` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -29,7 +41,6 @@ USE `reverse`;
 -- Estrutura da tabela `ebook`
 --
 
-DROP TABLE IF EXISTS `ebook`;
 CREATE TABLE `ebook` (
   `id` int(20) NOT NULL,
   `name` varchar(200) NOT NULL,
@@ -42,7 +53,11 @@ CREATE TABLE `ebook` (
 --
 
 INSERT INTO `ebook` (`id`, `name`, `author`, `photo`) VALUES
-(1, 'mida???', 'Eliel Siqueira', '');
+(2, 'mida???', 'Eliel Siqueira', ''),
+(3, 'mida???', 'Eliel Siqueira', ''),
+(4, 'mida???', 'Eliel Siqueira', ''),
+(5, 'asw aventuras na reciclagem', 'eliel', ''),
+(6, 'Os perigos do lixo nuclear', 'Eliel', '');
 
 -- --------------------------------------------------------
 
@@ -50,7 +65,6 @@ INSERT INTO `ebook` (`id`, `name`, `author`, `photo`) VALUES
 -- Estrutura da tabela `ecoponto`
 --
 
-DROP TABLE IF EXISTS `ecoponto`;
 CREATE TABLE `ecoponto` (
   `id` int(20) NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -60,8 +74,35 @@ CREATE TABLE `ecoponto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Extraindo dados da tabela `ecoponto`
+--
+
+INSERT INTO `ecoponto` (`id`, `name`, `number`, `adress`, `photo`) VALUES
+(2, 'Ecoponto de São Bernardo', '1238554466', 'Rua Marecgal da Vila', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `sessions`
+--
+
+CREATE TABLE `sessions` (
+  `id` int(20) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `token` varchar(200) NOT NULL,
+  `description` varchar(200) NOT NULL,
+  `create_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices para tabela `administrador`
+--
+ALTER TABLE `administrador`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices para tabela `ebook`
@@ -76,19 +117,37 @@ ALTER TABLE `ecoponto`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices para tabela `sessions`
+--
+ALTER TABLE `sessions`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `administrador`
+--
+ALTER TABLE `administrador`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `ebook`
 --
 ALTER TABLE `ebook`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `ecoponto`
 --
 ALTER TABLE `ecoponto`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de tabela `sessions`
+--
+ALTER TABLE `sessions`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT;
 COMMIT;
 

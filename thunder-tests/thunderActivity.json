@@ -1,89 +1,5 @@
 [
   {
-    "_id": "a41d7438-9d60-49d9-8712-378bceb660c1",
-    "colId": "history",
-    "containerId": "",
-    "name": "http://localhost/reverse--api/api/ebook/select-all",
-    "url": "http://localhost/reverse--api/api/ebook/select-all",
-    "method": "POST",
-    "sortNum": 0,
-    "created": "2022-05-23T17:46:12.318Z",
-    "modified": "2022-05-23T17:46:12.466Z",
-    "headers": [],
-    "params": [],
-    "tests": []
-  },
-  {
-    "_id": "a9a13f87-d3cc-401a-90e1-45c2519f327a",
-    "colId": "history",
-    "containerId": "",
-    "name": "http://localhost/reverse--api/api/ecoponto/select-all",
-    "url": "http://localhost/reverse--api/api/ecoponto/select-all",
-    "method": "POST",
-    "sortNum": 0,
-    "created": "2022-05-23T17:46:26.699Z",
-    "modified": "2022-05-23T17:46:26.718Z",
-    "headers": [],
-    "params": [],
-    "tests": []
-  },
-  {
-    "_id": "3cd2c946-5781-4c26-b6c8-97fee7b9ae46",
-    "colId": "history",
-    "containerId": "",
-    "name": "http://localhost/reverse--api/api/ecoponto/select-all",
-    "url": "http://localhost/reverse--api/api/ecoponto/select-all",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2022-05-23T17:46:38.327Z",
-    "modified": "2022-05-23T17:46:39.077Z",
-    "headers": [],
-    "params": [],
-    "tests": []
-  },
-  {
-    "_id": "3bfdabeb-c8c7-4184-8605-16b946255538",
-    "colId": "history",
-    "containerId": "",
-    "name": "http://localhost/reverse--api/api/ebook/select-all",
-    "url": "http://localhost/reverse--api/api/ebook/select-all",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2022-05-23T17:46:52.539Z",
-    "modified": "2022-05-23T17:46:52.599Z",
-    "headers": [],
-    "params": [],
-    "tests": []
-  },
-  {
-    "_id": "dac0fa4a-c3ba-4c1c-af7d-d907c16c85c5",
-    "colId": "history",
-    "containerId": "",
-    "name": "http://localhost/reverse--api/api/ebook/create",
-    "url": "http://localhost/reverse--api/api/ebook/create",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2022-05-23T17:50:06.469Z",
-    "modified": "2022-05-23T17:50:06.488Z",
-    "headers": [],
-    "params": [],
-    "body": {
-      "type": "formdata",
-      "raw": "",
-      "form": [
-        {
-          "name": "name",
-          "value": "Os perigos do lixo nuclear"
-        },
-        {
-          "name": "author",
-          "value": "Eliel"
-        }
-      ]
-    },
-    "tests": []
-  },
-  {
     "_id": "01b37b4c-8b4e-4757-9cd2-506a4864e9a7",
     "colId": "history",
     "containerId": "",
@@ -92,7 +8,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-05-23T17:50:16.516Z",
-    "modified": "2022-05-23T17:50:16.608Z",
+    "modified": "2022-06-02T16:06:53.019Z",
     "headers": [],
     "params": [],
     "body": {
@@ -106,90 +22,6 @@
         {
           "name": "author",
           "value": "Eliel"
-        }
-      ]
-    },
-    "tests": []
-  },
-  {
-    "_id": "3ab10cbb-12e5-4006-8071-8ae581cf4aec",
-    "colId": "history",
-    "containerId": "",
-    "name": "http://localhost/reverse--api/api/admin/create",
-    "url": "http://localhost/reverse--api/api/admin/create",
-    "method": "POST",
-    "sortNum": 0,
-    "created": "2022-05-31T19:24:19.677Z",
-    "modified": "2022-05-31T20:35:02.909Z",
-    "headers": [],
-    "params": [],
-    "body": {
-      "type": "formdata",
-      "raw": "",
-      "form": [
-        {
-          "name": "email",
-          "value": "eliel@gmail.com"
-        },
-        {
-          "name": "pass",
-          "value": "321123"
-        }
-      ]
-    },
-    "tests": []
-  },
-  {
-    "_id": "232f733d-ec91-4424-9134-cd13fb4e6af7",
-    "colId": "history",
-    "containerId": "",
-    "name": "http://localhost/reverse--api/api/session/create",
-    "url": "http://localhost/reverse--api/api/session/create",
-    "method": "POST",
-    "sortNum": 0,
-    "created": "2022-05-31T19:27:06.037Z",
-    "modified": "2022-05-31T19:27:06.052Z",
-    "headers": [],
-    "params": [],
-    "body": {
-      "type": "formdata",
-      "raw": "",
-      "form": [
-        {
-          "name": "email",
-          "value": "eliel@gmail.com"
-        },
-        {
-          "name": "pass",
-          "value": "321123"
-        }
-      ]
-    },
-    "tests": []
-  },
-  {
-    "_id": "ed281ddd-5f90-4570-91bb-baee6c7f0093",
-    "colId": "history",
-    "containerId": "",
-    "name": "http://localhost/reverse--api/api/login",
-    "url": "http://localhost/reverse--api/api/login",
-    "method": "POST",
-    "sortNum": 0,
-    "created": "2022-05-31T19:28:01.109Z",
-    "modified": "2022-05-31T19:28:01.120Z",
-    "headers": [],
-    "params": [],
-    "body": {
-      "type": "formdata",
-      "raw": "",
-      "form": [
-        {
-          "name": "email",
-          "value": "eliel@gmail.com"
-        },
-        {
-          "name": "pass",
-          "value": "321123"
         }
       ]
     },
@@ -204,7 +36,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-05-31T19:28:08.508Z",
-    "modified": "2022-05-31T19:28:08.521Z",
+    "modified": "2022-06-02T16:45:36.809Z",
     "headers": [],
     "params": [],
     "body": {
@@ -252,34 +84,6 @@
     "tests": []
   },
   {
-    "_id": "3926ffd1-42ee-47e4-9cd3-a532477ea9a3",
-    "colId": "history",
-    "containerId": "",
-    "name": "http://localhost/reverse--api/api/auth",
-    "url": "http://localhost/reverse--api/api/auth",
-    "method": "POST",
-    "sortNum": 0,
-    "created": "2022-05-31T19:34:17.040Z",
-    "modified": "2022-05-31T19:34:17.053Z",
-    "headers": [],
-    "params": [],
-    "body": {
-      "type": "formdata",
-      "raw": "",
-      "form": [
-        {
-          "name": "email",
-          "value": "eliel@gmail.com"
-        },
-        {
-          "name": "pass",
-          "value": "321123"
-        }
-      ]
-    },
-    "tests": []
-  },
-  {
     "_id": "c5f76127-e3e3-4852-af2d-0119053d8642",
     "colId": "history",
     "containerId": "",
@@ -288,7 +92,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-05-31T19:34:23.989Z",
-    "modified": "2022-05-31T20:34:07.217Z",
+    "modified": "2022-06-02T16:06:45.541Z",
     "headers": [],
     "params": [],
     "body": {

@@ -5,5 +5,12 @@
     "created": "2022-05-23T17:48:41.929Z",
     "sortNum": 10000,
     "folders": []
+  },
+  {
+    "_id": "a0f41a38-b7b6-4a41-b148-b24b394923b3",
+    "colName": "Ecoponto",
+    "created": "2022-06-02T15:57:18.254Z",
+    "sortNum": 20000,
+    "folders": []
   }
 ]

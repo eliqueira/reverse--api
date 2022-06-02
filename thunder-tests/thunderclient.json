@@ -12,5 +12,145 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "1fe4d535-c70a-459f-a5c7-5a0b494509c2",
+    "colId": "1c56fb4e-f59e-44e8-9de1-c3c31c2ad109",
+    "containerId": "",
+    "name": "delete",
+    "url": "http://localhost/reverse--api/api/ebook/delete",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-06-02T15:55:04.160Z",
+    "modified": "2022-06-02T15:55:04.160Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "d07a93f9-ca82-4bb7-a596-bca366ed568a",
+    "colId": "1c56fb4e-f59e-44e8-9de1-c3c31c2ad109",
+    "containerId": "",
+    "name": "create",
+    "url": "http://localhost/reverse--api/api/ebook/create",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-06-02T15:56:23.765Z",
+    "modified": "2022-06-02T15:56:23.765Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "asw aventuras na reciclagem"
+        },
+        {
+          "name": "author",
+          "value": "eliel"
+        },
+        {
+          "name": "photo",
+          "value": "sadsadwsdad"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "710e25fc-7426-4d22-b965-7c5d71b5b5fa",
+    "colId": "a0f41a38-b7b6-4a41-b148-b24b394923b3",
+    "containerId": "",
+    "name": "delete",
+    "url": "http://localhost/reverse--api/api/ecoponto/delete",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-06-02T15:57:36.289Z",
+    "modified": "2022-06-02T15:57:36.289Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "598f6cde-7296-41fa-8e05-2ebbe07d854d",
+    "colId": "a0f41a38-b7b6-4a41-b148-b24b394923b3",
+    "containerId": "",
+    "name": "create",
+    "url": "http://localhost/reverse--api/api/ecoponto/create",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-06-02T16:00:01.520Z",
+    "modified": "2022-06-02T16:00:01.520Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "Ecoponto de São Bernardo"
+        },
+        {
+          "name": "number",
+          "value": "1238554466"
+        },
+        {
+          "name": "adress",
+          "value": "Rua Marecgal da Vila"
+        },
+        {
+          "name": "photo",
+          "value": "adarfafadfetfaqf"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "d6bfe6b3-5487-4e22-9131-6e5f1e34e43a",
+    "colId": "a0f41a38-b7b6-4a41-b148-b24b394923b3",
+    "containerId": "",
+    "name": "select",
+    "url": "http://localhost/reverse--api/api/ecoponto/select-all",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2022-06-02T16:04:30.085Z",
+    "modified": "2022-06-02T16:04:30.085Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "id",
+          "value": ""
+        }
+      ]
+    },
+    "tests": []
   }
 ]
