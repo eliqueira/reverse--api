@@ -46,7 +46,7 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2022-06-02T15:56:23.765Z",
-    "modified": "2022-06-02T15:56:23.765Z",
+    "modified": "2022-06-08T18:02:34.879Z",
     "headers": [],
     "params": [],
     "body": {
@@ -63,7 +63,7 @@
         },
         {
           "name": "photo",
-          "value": "sadsadwsdad"
+          "value": "https://thumbs2.imgbox.com/6b/1b/IFmZ0XJ3_t.jpg"
         }
       ]
     },
@@ -102,7 +102,7 @@
     "method": "POST",
     "sortNum": 20000,
     "created": "2022-06-02T16:00:01.520Z",
-    "modified": "2022-06-02T16:00:01.520Z",
+    "modified": "2022-06-08T17:58:25.410Z",
     "headers": [],
     "params": [],
     "body": {
@@ -122,8 +122,12 @@
           "value": "Rua Marecgal da Vila"
         },
         {
+          "name": "numero",
+          "value": "200"
+        },
+        {
           "name": "photo",
-          "value": "adarfafadfetfaqf"
+          "value": "adsasfasfa"
         }
       ]
     },

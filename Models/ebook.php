@@ -3,19 +3,22 @@ class Ebook{
     public $id;
     public $name;
     public $author;
+    public $photo;
 
-    function __construct($id, $name, $author) {
+    function __construct($id, $name, $author, $photo) {
         $this->id = $id;
         $this->name = $name;
         $this->author = $author;
+        $this->photo = $photo;
     }
     function create(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("INSERT INTO ebook (name, author)
-            VALUES (:name, :author);");
+            $stmt = $db->conn->prepare("INSERT INTO ebook (name, author, photo)
+            VALUES (:name, :author, :photo);");
             $stmt->bindParam(':name' , $this->name);
             $stmt->bindParam(':author' , $this->author);
+            $stmt->bindParam(':photo' , $this->photo);
             $stmt->execute();
             $id = $db->conn->lastInsertId();
             
