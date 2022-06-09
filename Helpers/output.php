@@ -12,7 +12,6 @@ class Output{
         if($method != $_SERVER['REQUEST_METHOD']){
             $result['message'] = 'Method not allowed for this route.';
             $this->out($result,405);
-            die;
         }
     }
 }
