@@ -36,11 +36,11 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost/reverse--api/api/admin/login",
-    "url": "http://localhost/reverse--api/api/admin/login",
+    "url": "http://localhost/reverse--api/api/admin/create",
     "method": "POST",
     "sortNum": 0,
     "created": "2022-05-31T19:28:08.508Z",
-    "modified": "2022-06-02T16:45:36.809Z",
+    "modified": "2022-06-20T19:37:15.936Z",
     "headers": [],
     "params": [],
     "body": {
@@ -48,12 +48,16 @@
       "raw": "",
       "form": [
         {
+          "name": "name",
+          "value": "Eliel"
+        },
+        {
           "name": "email",
-          "value": "eliel@gmail.com"
+          "value": "elielsiqueira@gmail.com"
         },
         {
           "name": "pass",
-          "value": "321123"
+          "value": "eliel123"
         }
       ]
     },
@@ -68,8 +72,17 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-05-31T19:31:46.805Z",
-    "modified": "2022-06-15T21:49:35.539Z",
-    "headers": [],
+    "modified": "2022-06-20T19:37:42.252Z",
+    "headers": [
+      {
+        "name": "email",
+        "value": "eliel@gmail.com"
+      },
+      {
+        "name": "pass",
+        "value": "321123"
+      }
+    ],
     "params": [],
     "body": {
       "type": "formdata",
@@ -77,11 +90,11 @@
       "form": [
         {
           "name": "email",
-          "value": "eliel@gmail.com"
+          "value": "elielsiqueira@gmail.com"
         },
         {
           "name": "pass",
-          "value": "321123"
+          "value": "eliel123"
         }
       ]
     },

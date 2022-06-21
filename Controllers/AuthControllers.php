@@ -1,5 +1,5 @@
 <?php
-class AuthController{
+class AuthControllers{
 
     function login(){
         $response = new Output();
@@ -8,7 +8,7 @@ class AuthController{
         $email = $_POST['email'];
         $pass = $_POST['pass'];
 
-        $description = $_SERVER['HTTP_ADMIN_AGENT'];
+        $description = $_SERVER['HTTP_USER_AGENT'];
 
         $admin = new Admin(null, null, $email, sha1($pass));
         $adminLogged = $admin->login();

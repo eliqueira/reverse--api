@@ -1,5 +1,5 @@
 <?php
-class AdminController{
+class AdminControllers{
 
     function create(){
         $response = new Output();

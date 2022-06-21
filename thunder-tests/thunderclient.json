@@ -22,7 +22,7 @@
     "method": "POST",
     "sortNum": 20000,
     "created": "2022-06-02T15:55:04.160Z",
-    "modified": "2022-06-02T15:55:04.160Z",
+    "modified": "2022-06-20T19:43:50.861Z",
     "headers": [],
     "params": [],
     "body": {
@@ -31,7 +31,7 @@
       "form": [
         {
           "name": "id",
-          "value": "1"
+          "value": "24"
         }
       ]
     },
@@ -46,7 +46,7 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2022-06-02T15:56:23.765Z",
-    "modified": "2022-06-08T18:02:34.879Z",
+    "modified": "2022-06-20T17:41:12.186Z",
     "headers": [],
     "params": [],
     "body": {
@@ -58,8 +58,12 @@
           "value": "asw aventuras na reciclagem"
         },
         {
+          "name": "descricao",
+          "value": "o Eliel aventureiro, parte em uma jornada de catar lixos pelas ruas para salvar o planeta do doutor lixão"
+        },
+        {
           "name": "author",
-          "value": "eliel"
+          "value": "Eliel Macedo"
         },
         {
           "name": "photo",
