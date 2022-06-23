@@ -5,23 +5,26 @@ class Ebook{
     public $descricao;
     public $author;
     public $photo;
+    public $texto;
 
-    function __construct($id, $name,$descricao, $author, $photo) {
+    function __construct($id, $name,$descricao, $author, $photo,$texto) {
         $this->id = $id;
         $this->name = $name;
         $this->descricao = $descricao;
         $this->author = $author;
         $this->photo = $photo;
+        $this->texto = $texto;
     }
     function create(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("INSERT INTO ebook (name,descricao, author, photo)
-            VALUES (:name,:descricao, :author, :photo);");
+            $stmt = $db->conn->prepare("INSERT INTO ebook (name,descricao, author, photo, texto)
+            VALUES (:name,:descricao, :author, :photo), :texto;");
             $stmt->bindParam(':name' , $this->name);
             $stmt->bindParam(':descricao' , $this->descricao);
             $stmt->bindParam(':author' , $this->author);
             $stmt->bindParam(':photo' , $this->photo);
+            $stmt->bindParam(':texto' , $this->texto);
             $stmt->execute();
             $id = $db->conn->lastInsertId();
             
@@ -50,12 +53,13 @@ class Ebook{
     function update(){
         $db = new Database(); 
         try{
-            $stmt = $db->conn->prepare("UPDATE ebook SET  name = :name, descricao = :descricao, author = :author, photo = :photo, WHERE id = :id;");
+            $stmt = $db->conn->prepare("UPDATE ebook SET  name = :name, descricao = :descricao, author = :author, photo = :photo, texto = :texto WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
             $stmt->bindParam(':name', $this->name);
             $stmt->bindParam(':descricao', $this->descricao);
             $stmt->bindParam(':author', $this->author);
             $stmt->bindParam(':photo', $this->photo);
+            $stmt->bindParam(':texto', $this->texto);
             $stmt->execute();
             return true;
         }

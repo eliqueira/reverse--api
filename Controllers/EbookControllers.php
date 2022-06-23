@@ -45,9 +45,10 @@ class EbookControllers{
         $descricao = $_POST['descricao'];
         $author = $_POST['author'];
         $photo = $_POST['photo'];
+        $texto = $_POST['texto'];
 
 
-        $ebook = new Ebook($id,$name,$descricao,$author,$photo);
+        $ebook = new Ebook($id,$name,$descricao,$author,$photo,$texto);
         $ebook->update();
 
         $result['message'] = "Atualizado com sucesso";
@@ -56,6 +57,7 @@ class EbookControllers{
         $result['ebook']['descricao'] = $descricao;
         $result['ebook']['author'] = $author;
         $result['ebook']['photo'] = $photo;
+        $result['ebook']['texto'] = $texto;
 
         $response->out($result);
     }
@@ -63,7 +65,7 @@ class EbookControllers{
     function selectAll(){
         $response = new Output();
         $response->allowedMethod('GET');
-        $ebook = new Ebook(null,null,null,null,null);
+        $ebook = new Ebook(null,null,null,null,null,null);
         $result = $ebook->selectAll();
         $response->out($result);
     }
@@ -72,7 +74,7 @@ class EbookControllers{
         $response = new Output();
         $response->allowedMethod('GET');
         $id = $_GET['id'];
-        $ebook = new Ebook($id,null,null,null,null);
+        $ebook = new Ebook($id,null,null,null,null,null);
         $result = $ebook->selectByid();
         $response->out($result);
     }

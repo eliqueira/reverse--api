@@ -9,8 +9,9 @@ class EcopontoControllers{
         $adress = $_POST['adress'];
         $numero = $_POST['numero'];
         $photo = $_POST['photo'];
+        $localizacao = $_POST['localizacao'];
 
-        $eco = new Ecoponto(null, $name,$number,$adress,$numero,$photo);
+        $eco = new Ecoponto(null, $name,$number,$adress,$numero,$photo,$localizacao);
         $id = $eco->create();
 
         $result['message'] = "Criado com sucesso";
@@ -20,6 +21,7 @@ class EcopontoControllers{
         $result['ecoponto']['adress'] = $adress;
         $result['ecoponto']['numero'] = $numero;
         $result['ecoponto']['photo'] = $photo;
+        $result['ecoponto']['localizacao'] = $localizacao;
 
         $response->out($result);
 
@@ -30,7 +32,7 @@ class EcopontoControllers{
         $response->allowedMethod('POST');
         $id = $_POST['id'];
 
-        $eco = new Ecoponto($id, null,null,null,null,null);
+        $eco = new Ecoponto($id, null,null,null,null,null,null);
         $eco->delete();
 
         $result['message'] = "Deletado com sucesso";
@@ -47,8 +49,9 @@ class EcopontoControllers{
         $adress = $_POST['adress'];
         $numero = $_POST['numero'];
         $photo = $_POST['photo'];
+        $localizacao = $_POST['localizacao'];
 
-        $eco = new Ecoponto($id,$name,$number,$adress,$numero,$photo);
+        $eco = new Ecoponto($id,$name,$number,$adress,$numero,$photo,$localizacao);
         $eco->update();
 
         $result['message'] = "Atualizado com sucesso";
@@ -58,13 +61,14 @@ class EcopontoControllers{
         $result['ecoponto']['adress'] = $adress;
         $result['ecoponto']['numero'] = $numero;
         $result['ecoponto']['photo'] = $photo;
+        $result['ecoponto']['localizacao'] = $localizacao;
         $response->out($result);
     }
     
     function selectAll(){
         $response = new Output();
         $response->allowedMethod('GET');
-        $eco = new Ecoponto(null,null,null,null,null,null);
+        $eco = new Ecoponto(null,null,null,null,null,null,null);
         $result = $eco->selectAll();
         $response->out($result);
     }
@@ -73,7 +77,7 @@ class EcopontoControllers{
         $response = new Output();
         $response->allowedMethod('GET');
         $id = $_GET['id'];
-        $eco = new Ecoponto($id,null,null,null,null);
+        $eco = new Ecoponto($id,null,null,null,null,null);
         $result = $eco->selectByid();
         $response->out($result);
     }
