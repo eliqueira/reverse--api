@@ -19,7 +19,7 @@ class Ebook{
         $db = new Database();
         try{
             $stmt = $db->conn->prepare("INSERT INTO ebook (name,descricao, author, photo, texto)
-            VALUES (:name,:descricao, :author, :photo), :texto;");
+            VALUES (:name,:descricao, :author, :photo, :texto);");
             $stmt->bindParam(':name' , $this->name);
             $stmt->bindParam(':descricao' , $this->descricao);
             $stmt->bindParam(':author' , $this->author);

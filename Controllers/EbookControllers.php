@@ -8,9 +8,10 @@ class EbookControllers{
         $descricao = $_POST['descricao'];
         $author = $_POST['author'];
         $photo = $_POST['photo'];
+        $texto = $_POST['texto'];
 
 
-        $ebook = new Ebook(NULL, $name, $descricao, $author,$photo);
+        $ebook = new Ebook(NULL, $name, $descricao, $author,$photo,$texto);
         $id = $ebook->create();
 
         $result['message'] = "Criado com sucesso";
@@ -19,6 +20,7 @@ class EbookControllers{
         $result['ebook']['descricao'] = $descricao;
         $result['ebook']['author'] = $author;
         $result['ebook']['photo'] = $photo;
+        $result['ebook']['texto'] = $texto;
 
         $response->out($result);
 
@@ -29,7 +31,7 @@ class EbookControllers{
         $response->allowedMethod('POST');
         $id = $_POST['id'];
 
-        $ebook = new Ebook($id, null,null,null,null);
+        $ebook = new Ebook($id, null,null,null,null,null);
         $ebook->delete();
 
         $result['message'] = "Deletado com sucesso";
