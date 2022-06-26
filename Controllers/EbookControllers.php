@@ -14,7 +14,7 @@ class EbookControllers{
         $ebook = new Ebook(NULL, $name, $descricao, $author,$photo,$texto);
         $id = $ebook->create();
 
-        $result['message'] = "Criado com sucesso";
+        $result['message'] = "Cadastrado com sucesso";
         $result['ebook']['id'] = $id;
         $result['ebook']['name'] = $name;
         $result['ebook']['descricao'] = $descricao;

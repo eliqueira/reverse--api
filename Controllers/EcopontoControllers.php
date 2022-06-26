@@ -14,7 +14,7 @@ class EcopontoControllers{
         $eco = new Ecoponto(null, $name,$number,$adress,$numero,$photo,$localizacao);
         $id = $eco->create();
 
-        $result['message'] = "Criado com sucesso";
+        $result['message'] = "Cadastrado com sucesso";
         $result['ecoponto']['id'] = $id;
         $result['ecoponto']['name'] = $name;
         $result['ecoponto']['number'] = $number;
@@ -77,7 +77,7 @@ class EcopontoControllers{
         $response = new Output();
         $response->allowedMethod('GET');
         $id = $_GET['id'];
-        $eco = new Ecoponto($id,null,null,null,null,null);
+        $eco = new Ecoponto($id,null,null,null,null,null,null);
         $result = $eco->selectByid();
         $response->out($result);
     }
