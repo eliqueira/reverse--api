@@ -3,16 +3,16 @@
 class Ecoponto{
     public $id;
     public $name;
-    public $number;
+    public $phone;
     public $adress;
     public $numero;
     public $photo;
     public $localizacao;
 
-    function __construct($id, $name, $number, $adress,$numero,$photo,$localizacao ) {
+    function __construct($id, $name, $phone, $adress,$numero,$photo,$localizacao ) {
         $this->id = $id;
         $this->name = $name;
-        $this->number = $number;
+        $this->phone = $phone;
         $this->adress = $adress;
         $this->numero = $numero;
         $this->photo = $photo;
@@ -21,10 +21,10 @@ class Ecoponto{
     function create(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("INSERT INTO ecoponto (name, number, adress, numero, photo, localizacao)
-            VALUES (:name, :number, :adress, :numero, :photo, :localizacao);");
+            $stmt = $db->conn->prepare("INSERT INTO ecoponto (name, phone, adress, numero, photo, localizacao)
+            VALUES (:name, :phone, :adress, :numero, :photo, :localizacao);");
             $stmt->bindParam(':name' , $this->name);
-            $stmt->bindParam(':number' , $this->number);
+            $stmt->bindParam(':phone' , $this->phone);
             $stmt->bindParam(':adress' , $this->adress);
             $stmt->bindParam(':numero' , $this->numero);
             $stmt->bindParam(':photo' , $this->photo);
@@ -57,10 +57,10 @@ class Ecoponto{
     function update(){
         $db = new Database(); 
         try{
-            $stmt = $db->conn->prepare("UPDATE ecoponto SET  name = :name, number = :number, adress = :adress, numero = :numero, photo = :photo, localizacao = :localizacao WHERE id = :id;");
+            $stmt = $db->conn->prepare("UPDATE ecoponto SET  name = :name, phone = :phone, adress = :adress, numero = :numero, photo = :photo, localizacao = :localizacao WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
             $stmt->bindParam(':name', $this->name);
-            $stmt->bindParam(':number', $this->number);
+            $stmt->bindParam(':phone', $this->phone);
             $stmt->bindParam(':adress', $this->adress);
             $stmt->bindParam(':numero', $this->numero);
             $stmt->bindParam(':photo', $this->photo);

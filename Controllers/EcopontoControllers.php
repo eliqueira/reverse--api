@@ -5,19 +5,19 @@ class EcopontoControllers{
         $response = new Output();
         $response->allowedMethod('POST');
         $name = $_POST['name'];
-        $number = $_POST['number'];
+        $phone = $_POST['phone'];
         $adress = $_POST['adress'];
         $numero = $_POST['numero'];
         $photo = $_POST['photo'];
         $localizacao = $_POST['localizacao'];
 
-        $eco = new Ecoponto(null, $name,$number,$adress,$numero,$photo,$localizacao);
+        $eco = new Ecoponto(null, $name,$phone,$adress,$numero,$photo,$localizacao);
         $id = $eco->create();
 
         $result['message'] = "Cadastrado com sucesso";
         $result['ecoponto']['id'] = $id;
         $result['ecoponto']['name'] = $name;
-        $result['ecoponto']['number'] = $number;
+        $result['ecoponto']['phone'] = $phone;
         $result['ecoponto']['adress'] = $adress;
         $result['ecoponto']['numero'] = $numero;
         $result['ecoponto']['photo'] = $photo;
@@ -45,19 +45,19 @@ class EcopontoControllers{
         $response->allowedMethod('POST');
         $id = $_POST['id'];
         $name = $_POST['name'];
-        $number = $_POST['number'];
+        $phone = $_POST['phone'];
         $adress = $_POST['adress'];
         $numero = $_POST['numero'];
         $photo = $_POST['photo'];
         $localizacao = $_POST['localizacao'];
 
-        $eco = new Ecoponto($id,$name,$number,$adress,$numero,$photo,$localizacao);
+        $eco = new Ecoponto($id,$name,$phone,$adress,$numero,$photo,$localizacao);
         $eco->update();
 
         $result['message'] = "Atualizado com sucesso";
         $result['ecoponto']['id'] = $id;
         $result['ecoponto']['name'] = $name;
-        $result['ecoponto']['number'] = $number;
+        $result['ecoponto']['phone'] = $phone;
         $result['ecoponto']['adress'] = $adress;
         $result['ecoponto']['numero'] = $numero;
         $result['ecoponto']['photo'] = $photo;
